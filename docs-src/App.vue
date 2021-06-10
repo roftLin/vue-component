@@ -2,7 +2,7 @@
   <div id="app">
     <header>
       <h1>{{ config.name }}</h1>
-      <div class="command">npm install --save {{ config.name }}</div>
+      <div class="command">yarn add {{ config.name }}</div>
       <section class="nav">
         <router-link v-for="d in routes" :key="d.path" :to="d.path">{{ d.name }}</router-link>
         <a :href="`https://github.com/${config.author}/${config.name}#usage`">文档</a>
@@ -13,11 +13,6 @@
 
     <router-view />
 
-    <section class="more">
-      <div class="section-content">
-        了解 <a :href="`https://github.com/${config.author}/${config.name}`">更多</a>!
-      </div>
-    </section>
   </div>
 </template>
 
@@ -168,9 +163,4 @@ a {
   border-radius: 3px 3px 0 0;
 }
 
-.more {
-  font-size: 24px;
-  text-align: center;
-  background: lighten($primary-color, 45%);
-}
 </style>

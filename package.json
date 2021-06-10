@@ -1,6 +1,6 @@
 {
-  "name": "vue-component-template",
-  "version": "0.1.6",
+  "name": "vue-component",
+  "version": "1.0.0",
   "description": "vue组件模板",
   "keywords": [
     "vue",
@@ -15,19 +15,19 @@
   "private": false,
   "author": "roftLin",
   "license": "MIT",
-  "main": "dist/vue-component-template.umd.js",
-  "module": "dist/vue-component-template.esm.js",
-  "unpkg": "dist/vue-component-template.min.js",
+  "main": "dist/vue-component.umd.js",
+  "module": "dist/vue-component.esm.js",
+  "unpkg": "dist/vue-component.min.js",
   "scripts": {
-    "dev": "cross-env NODE_ENV=development rollup --config build/rollup.config.es.js --watch",
     "build": "cross-env NODE_ENV=production npm run build:browser && npm run build:es && npm run build:umd",
-    "test": "npm run test:unit",
     "build:browser": "rollup --config build/rollup.config.browser.js",
     "build:es": "rollup --config build/rollup.config.es.js",
     "build:umd": "rollup --config build/rollup.config.umd.js",
+    "dev": "cross-env NODE_ENV=development rollup --config build/rollup.config.es.js --watch",
     "demo:dev": "vue-cli-service serve",
     "demo:build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
+    "test": "npm run test:unit",
     "test:unit": "vue-cli-service test:unit"
   },
   "repository": {
@@ -37,7 +37,7 @@
   "bugs": {
     "url": "https://github.com/roftLin/vue-component/issues"
   },
-  "homepage": "https://roftLin.github.com/vue-component-template",
+  "homepage": "https://roftLin.github.com/vue-component",
   "dependencies": {
     "vue": "^2.6.10"
   },

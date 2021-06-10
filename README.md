@@ -1,4 +1,4 @@
-# vue-component-template
+# vue-component
 
 ## 设置
 
