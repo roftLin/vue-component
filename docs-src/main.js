@@ -1,13 +1,13 @@
-import Vue from 'vue'
+import { createApp } from 'vue'
+
 import App from './App.vue'
 import router from './router'
-import Components from '../'
-import('../package.json').then(config => import(`../dist/${config.name}.css`))
+import Components from '../src'
+// import('../package.json').then(config => import(`../dist/${config.name}.css`))
 
-Vue.use(Components)
+const app = createApp(App)
+app.use(Components)
+app.use(router)
 
-new Vue({
-  el: '#app',
-  router,
-  render: h => h(App)
-})
+app.mount('#app')
+
