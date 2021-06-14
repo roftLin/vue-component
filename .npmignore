@@ -16,6 +16,7 @@ babel.config.js
 jest.config.js
 package-lock.json
 vue.config.js
+vue.config.test.js
 
 .git/
 .vscode/

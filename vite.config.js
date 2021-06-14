@@ -1,7 +1,10 @@
 import { defineConfig } from 'vite'
 import vue3 from '@vitejs/plugin-vue'
-import { createVuePlugin } from "vite-plugin-vue2";
+// import { createVuePlugin } from "vite-plugin-vue2";
 import path from "path";
+import config from './package.json' 
+
+const { name, version } = config
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -18,5 +21,27 @@ export default defineConfig({
         additionalData: `@import "styles/imports.scss";`
       }
     }
-  }
+  },
+   ...process.env.BULID_TYPE === 'lib' ? {
+    build:{
+      lib:{
+        entry: path.resolve(__dirname, './src/index.js'),
+        name
+      },
+      rollupOptions: {
+        // make sure to externalize deps that shouldn't be bundled
+        // into your library
+        external: ['vue'],
+        output: {
+          assetFileNames: `${name}.[ext]`,
+          // Provide global variables to use in the UMD build
+          // for externalized deps
+          globals: {
+            vue: 'Vue'
+          }
+        }
+      }
+    },
+    publicDir:'',
+  } : {}
 })

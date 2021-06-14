@@ -8,15 +8,15 @@
 export default {
   name: 'VComponent',
   props: {
-    msg: { type: String, default: '' }
-  }
+    msg: { type: String, default: '' },
+  },
 }
 </script>
 
 <style lang="scss" scoped>
-.component{
+.component {
   font-size: 14px;
-  .component-content{
+  .component-content {
     color: #40b883;
   }
 }

@@ -19,7 +19,7 @@
   </div>
 </template>
 
-<script setup>
+<script>
 import screenfull from "screenfull";
 import { routes } from "./router";
 import { config } from "./config";
