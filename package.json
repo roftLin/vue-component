@@ -1,6 +1,6 @@
 {
   "name": "vue-component",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "vue组件模板",
   "keywords": [
     "vue",
@@ -25,15 +25,8 @@
     }
   },
   "scripts": {
-    "build2": "cross-env NODE_ENV=production npm run build:browser && npm run build:es && npm run build:umd",
-    "build:browser": "rollup --config build/rollup.config.browser.js",
-    "build:es": "rollup --config build/rollup.config.es.js",
-    "build:umd": "rollup --config build/rollup.config.umd.js",
-    "dev": "cross-env NODE_ENV=development rollup --config build/rollup.config.es.js --watch",
-    "demo:dev": "vue-cli-service serve",
-    "demo:build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "vite": "vite",
+    "start": "vite",
     "test": "vite --config vite.config.test.js",
     "build:app": "cross-env BULID_TYPE=app vite build",
     "build:lib": "cross-env BULID_TYPE=lib vite build"
