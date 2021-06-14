@@ -43,5 +43,9 @@ export default defineConfig({
       }
     },
     publicDir:'',
-  } : {}
+  } : {
+    build:{
+      outDir:'docs'
+    }
+  }
 })
