@@ -1,6 +1,5 @@
 import { defineConfig } from 'vite'
 import vue3 from '@vitejs/plugin-vue'
-// import { createVuePlugin } from "vite-plugin-vue2";
 import path from "path";
 import config from './package.json' 
 
