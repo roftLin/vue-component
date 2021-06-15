@@ -21,4 +21,4 @@ jobs:
         ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
         BRANCH: gh-pages
         FOLDER: docs
-        BUILD_SCRIPT: yarn && yarn test && yarn build:app
+        BUILD_SCRIPT: npm install && npm run test && npm run build:app
