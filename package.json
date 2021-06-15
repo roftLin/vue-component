@@ -29,7 +29,8 @@
     "start": "vite",
     "test": "vite --config vite.config.test.js",
     "build:app": "cross-env BULID_TYPE=app vite build",
-    "build:lib": "cross-env BULID_TYPE=lib vite build"
+    "build:lib": "cross-env BULID_TYPE=lib vite build",
+    "yalc": "yarn build:lib && yalc push"
   },
   "repository": {
     "type": "git",
