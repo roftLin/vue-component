@@ -1,9 +1,9 @@
 name: GitHub Actions Build and Deploy Demo
-# on: [push]
-on:
-  push:
-    branches:
-      - vite
+on: [push]
+# on:
+#   push:
+#     branches:
+#       - vite
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
@@ -14,7 +14,7 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v2
       with:
-          ref: vite
+          ref: main
       
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v1
