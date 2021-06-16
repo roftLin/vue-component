@@ -12,22 +12,34 @@
 }
 ```
 
-### 组件运行
+### 安装
 
 ```js
-yarn install
-yarn dev
+yarn
 ```
 
 ### 组件打包发布
 
 ```js
-yarn build
+yarn build:lib
 yarn publish
 ```
 
-### demo
+### 预览Demo
 
 ```js
-yarn demo:dev
+yarn start
+```
+
+### 跑测试
+
+```js
+yarn test
+```
+
+### 测试开发自动化流程
+
+```js
+lib端（组件开发）：yarn yalc:watch 
+app端（实时预览）：yarn yalc:link 
 ```

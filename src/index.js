@@ -1,5 +1,4 @@
 import Component from './lib/component.vue'
-export default Component
 
 const components = [
   Component
@@ -14,4 +13,7 @@ const install = function (Vue) {
 if (typeof window !== 'undefined' && window.Vue) {
   install(window.Vue)
 }
+export { install }
+
+export default Component
 
