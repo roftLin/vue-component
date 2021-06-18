@@ -180,7 +180,7 @@ export default {
     },
     resetField(idx) {
       this.$refs.form.fields.forEach((item) => {
-        if (item.prop.split('.')[1] === idx) {
+        if (item.prop.split('.')[1] === idx + '') {
           item.resetField()
         }
       })
