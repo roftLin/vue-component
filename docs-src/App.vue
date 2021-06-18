@@ -4,51 +4,48 @@
       <h1>{{ config.name }}</h1>
       <div class="command">yarn add {{ config.name }}</div>
       <section class="nav">
-        <router-link v-for="d in routes" :key="d.path" :to="d.path">{{
-          d.name
-        }}</router-link>
-        <a :href="`https://github.com/${config.author}/${config.name}#usage`"
-          >文档</a
-        >
+        <router-link v-for="d in routes" :key="d.path" :to="d.path">{{ d.name }}</router-link>
+        <a :href="`https://github.com/${config.author}/${config.name}#usage`">文档</a>
         <a @click="toggleFullscreen">切换全屏</a>
       </section>
       <!-- <div class="description">{{ config.description }}</div> -->
     </header>
 
     <router-view />
+
   </div>
 </template>
 
 <script>
-import screenfull from "screenfull";
-import { routes } from "./router";
-import { config } from "./config";
+import screenfull from 'screenfull'
+import { routes } from './router'
+import { config } from './config'
 
 export default {
   data() {
     return {
-      routes: routes.filter((route) => route.name),
-      config,
-    };
+      routes: routes.filter(route => route.name),
+      config
+    }
   },
   created() {
-    document.title = config.name + "-demo";
+    document.title = config.name + '-demo'
   },
   methods: {
     toggleFullscreen(event) {
       if (screenfull.isEnabled) {
-        screenfull.toggle(document.documentElement);
+        screenfull.toggle(document.documentElement)
       }
-    },
-  },
-};
+    }
+  }
+}
 </script>
 
 <style lang="scss">
 body {
   background: white;
   margin: 0;
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -63,8 +60,8 @@ header {
   }
 }
 
-.page {
-  max-width: 1000px;
+.page{
+  // max-width: 1000px;
   margin: 0 auto;
   padding: 20px;
 }
@@ -165,4 +162,5 @@ a {
   border: 1px solid #eee;
   border-radius: 3px 3px 0 0;
 }
+
 </style>

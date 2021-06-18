@@ -1,4 +1,4 @@
-import Component from './lib/component.vue'
+import Component from './lib/index.vue'
 
 const components = [
   Component

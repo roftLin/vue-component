@@ -1,4 +1,4 @@
-# vue-component
+# EditorTable
 
 ## 设置
 

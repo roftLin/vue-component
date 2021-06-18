@@ -22,7 +22,6 @@ jobs:
     - name: Install and Build 
       run: |
         yarn
-        yarn test
         yarn build:app
           
     - name: Build and Deploy

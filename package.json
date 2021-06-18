@@ -1,5 +1,5 @@
 {
-  "name": "vue-component",
+  "name": "EditorTable",
   "version": "0.0.1",
   "description": "vue组件模板",
   "keywords": [
@@ -15,9 +15,9 @@
   "private": false,
   "author": "roftLin",
   "license": "MIT",
-  "main": "dist/vue-component.umd.js",
-  "module": "dist/vue-component.es.js",
-  "unpkg": "dist/vue-component.min.js",
+  "main": "dist/EditorTable.umd.js",
+  "module": "dist/EditorTable.es.js",
+  "unpkg": "dist/EditorTable.min.js",
   "scripts": {
     "lint": "vue-cli-service lint",
     "start": "vite",
@@ -30,12 +30,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/roftLin/vue-component.git"
+    "url": "https://github.com/roftLin/EditorTable.git"
   },
   "bugs": {
-    "url": "https://github.com/roftLin/vue-component/issues"
+    "url": "https://github.com/roftLin/EditorTable/issues"
   },
-  "homepage": "https://roftLin.github.com/vue-component",
+  "homepage": "https://roftLin.github.com/EditorTable",
   "dependencies": {
     "vue": "^2.6.10"
   },
@@ -50,7 +50,8 @@
     "vite": "^2.3.7",
     "vite-plugin-test": "^0.0.5",
     "vite-plugin-vue2": "^1.6.2",
-    "vue-router": "3.0.1"
+    "vue-router": "3.0.1",
+    "element-ui": "^2.10.1"
   },
   "browserslist": [
     "> 1%",
