@@ -1,7 +1,7 @@
 import { mount } from '@vue/test-utils'
 import App from '../src/index'
 
-describe('App.spec.js', () => {
+describe('index.spec.js', () => {
   it('renders', async () => {
     const wrapper = mount(App, {
       propsData: {
