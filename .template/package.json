@@ -1,0 +1,32 @@
+{
+  "name": "<%= name %>",
+  "version": "<%= version %>",
+  "main": "<%= main %>",
+  "module": "<%= module %>",
+  "author": "<%= author %>",
+  "license": "<%= license %>",
+  "repository": {
+    "type": "<%= repository.type %>",
+    "url": "<%= repository.url %>"
+  },
+  "dependencies": {
+    "vue": "^2.6.10"
+  },
+  "devDependencies": {
+    "@vue/compiler-sfc": "^3.0.5",
+    "@vue/test-utils": "2.0.0-rc.0",
+    "cross-env": "^6.0.3",
+    "highlight.js": "^9.17.1",
+    "puppeteer": "^7.1.0",
+    "sass": "^1.34.1",
+    "screenfull": "^5.0.0",
+    "vite": "^2.3.7",
+    "vite-plugin-test": "^0.0.5",
+    "vite-plugin-vue2": "^1.6.2",
+    "vue-router": "3.0.1"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions"
+  ]
+}
