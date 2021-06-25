@@ -12,6 +12,15 @@
   "dependencies": {
     "vue": "^3.0.5"
   },
+  "scripts": {
+    "start": "vite",
+    "test": "vite --config vite.config.test.js",
+    "build:app": "cross-env BULID_TYPE=app vite build",
+    "build:lib": "cross-env BULID_TYPE=lib vite build",
+    "yalc:init": "yarn global add yalc nodemon",
+    "yalc:push": "yarn build:lib && yalc push",
+    "yalc:watch": "nodemon --ignore dist/ --ignore node_modules/ --watch src -C -e js,jsx,ts,vue,html,less,scss --debug -x 'yarn yalc:push'"
+  },
   "devDependencies": {
     "@vitejs/plugin-vue": "^1.2.3",
     "@vue/compiler-sfc": "^3.0.5",
