@@ -4,9 +4,12 @@
       <h1>{{ config.name }}</h1>
       <div class="command">yarn add {{ config.name }}</div>
       <section class="nav">
-        <router-link v-for="d in routes" :key="d.path" :to="d.path">{{ d.name }}</router-link>
+        <router-link v-for="d in routes"
+                     :key="d.path"
+                     :to="d.path">{{ d.name }}</router-link>
         <a :href="`https://github.com/${config.author}/${config.name}#usage`">文档</a>
         <a @click="toggleFullscreen">切换全屏</a>
+
       </section>
       <!-- <div class="description">{{ config.description }}</div> -->
     </header>
@@ -24,8 +27,8 @@ import { config } from './config'
 export default {
   data() {
     return {
-      routes: routes.filter(route => route.name),
-      config
+      routes: routes.filter((route) => route.name),
+      config,
     }
   },
   created() {
@@ -36,8 +39,8 @@ export default {
       if (screenfull.isEnabled) {
         screenfull.toggle(document.documentElement)
       }
-    }
-  }
+    },
+  },
 }
 </script>
 
@@ -60,7 +63,7 @@ header {
   }
 }
 
-.page{
+.page {
   // max-width: 1000px;
   margin: 0 auto;
   padding: 20px;
@@ -162,5 +165,4 @@ a {
   border: 1px solid #eee;
   border-radius: 3px 3px 0 0;
 }
-
 </style>

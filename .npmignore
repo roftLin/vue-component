@@ -17,6 +17,12 @@ jest.config.js
 package-lock.json
 vue.config.js
 vue.config.test.js
+.template
+docs-src/
+src/
+index.html
+vite.config.js
+vite.config.test.js
 
 .git/
 .vscode/
