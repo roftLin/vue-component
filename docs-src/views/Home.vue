@@ -8,8 +8,10 @@
                      @submit="submit" />
       </div>
     </section>
-    <button v-print="printObj">Print</button>
+    <!-- <button v-print="'printMe'">Print</button>
     <button @click="handlePrint">Print</button>
+    <button @click="handlePrint">Print</button>
+    <button @click="handlePrint">Print</button> -->
 
     <!-- <section id='printMe'
              class="snippets">

@@ -28,7 +28,7 @@
                            v-bind="initAttrs(column, $index)"
                            class="width100" />
               <template v-else>
-                <div>
+                <div class="operating">
                   <el-link type="primary"
                            :underline="false"
                            @click="save(row, $index)"
@@ -71,8 +71,12 @@ export default {
     CommonText,
   },
   data() {
-    const { columns = [], data = [], isDetail = false, isSubmit = false } =
-      this.config || {}
+    const {
+      columns = [],
+      data = [],
+      isDetail = false,
+      isSubmit = false,
+    } = this.config || {}
 
     return {
       form: {
@@ -191,3 +195,8 @@ export default {
   },
 }
 </script>
+<style lang="css" scoped>
+.operating .el-link {
+  margin-right: 8px;
+}
+</style>

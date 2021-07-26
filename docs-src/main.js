@@ -6,9 +6,9 @@ import('../package.json').then(config => import(`../dist/${config.name}.css`))
 import ElementUI from 'element-ui';
 import locale from 'element-ui/lib/locale/lang/zh-CN';
 import 'element-ui/lib/theme-chalk/index.css';
-// import Print from 'vue-print-nb'
+import Print from 'vue-print-nb'
 // import Print from '@linyi/vue-print'
-import Print from './components/print'
+// import Print from './components/print'
 
 Vue.use(Print);
 Vue.use(install)
